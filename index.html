@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///Users/cop/Downloads/dexeus-mujer-propuesta-zoopa.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta Web Dexeus Mujer - Zoopa</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 1.5cm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Georgia", serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .header {
+      border-bottom: 3px solid #000;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 24pt;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .header .subtitle {
+      font-size: 11pt;
+      color: #666;
+      font-style: italic;
+    }
+
+    .header .date {
+      font-size: 9pt;
+      color: #999;
+      margin-top: 10px;
+    }
+
+    .exec-summary {
+      background: #f7f7f7;
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-left: 4px solid #000;
+    }
+
+    .exec-summary h2 {
+      font-size: 10pt;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .exec-summary p {
+      font-size: 11pt;
+      margin-bottom: 10px;
+    }
+
+    .exec-summary strong {
+      color: #c00;
+    }
+
+    .section {
+      margin-bottom: 35px;
+      page-break-inside: avoid;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+      gap: 12px;
+    }
+
+    .section-number {
+      background: #000;
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12pt;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 14pt;
+      font-weight: 600;
+    }
+
+    .section-time {
+      margin-left: auto;
+      font-size: 9pt;
+      color: #666;
+      background: #f0f0f0;
+      padding: 3px 10px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .problem-box,
+    .solution-box,
+    .insight-box,
+    .note-box {
+      padding: 12px 15px;
+      margin-bottom: 12px;
+      font-size: 10pt;
+    }
+
+    .problem-box {
+      background: #fff5f5;
+      border: 1px solid #ffcccc;
+    }
+
+    .problem-box::before {
+      content: "PROBLEMA: ";
+      font-weight: 700;
+      color: #c00;
+    }
+
+    .solution-box {
+      background: #f5fff5;
+      border: 1px solid #ccffcc;
+    }
+
+    .solution-box::before {
+      content: "SOLUCION: ";
+      font-weight: 700;
+      color: #060;
+    }
+
+    .insight-box {
+      background: #fff9e6;
+      border: 1px solid #ffe066;
+    }
+
+    .insight-box::before {
+      content: "INSIGHT: ";
+      font-weight: 700;
+      color: #996600;
+    }
+
+    .note-box {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+    }
+
+    .copy-box {
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      padding: 15px 18px;
+      margin: 12px 0;
+      font-family: "Consolas", "Monaco", monospace;
+      font-size: 10pt;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      position: relative;
+    }
+
+    .copy-box::before {
+      content: "COPIAR";
+      position: absolute;
+      top: -8px;
+      right: 10px;
+      background: #000;
+      color: #fff;
+      font-size: 7pt;
+      padding: 2px 8px;
+      font-family: "Georgia", serif;
+      letter-spacing: 1px;
+    }
+
+    .checklist {
+      list-style: none;
+      margin: 15px 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      font-size: 10pt;
+    }
+
+    .checkbox {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #333;
+      margin-right: 10px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 10pt;
+    }
+
+    th {
+      background: #000;
+      color: #fff;
+      text-align: left;
+      padding: 8px 12px;
+      font-weight: 500;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e0e0e0;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) {
+      background: #fafafa;
+    }
+
+    .grid-2,
+    .grid-3 {
+      display: grid;
+      gap: 15px;
+      margin: 15px 0;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .card h4 {
+      font-size: 10.5pt;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 9.5pt;
+      color: #444;
+    }
+
+    .metrics-box {
+      background: #f0f4f8;
+      border: 1px solid #d0d8e0;
+      padding: 15px;
+      margin: 15px 0;
+    }
+
+    .metrics-box h4 {
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      border-bottom: 1px dotted #ccc;
+      font-size: 10pt;
+      gap: 20px;
+    }
+
+    .metric-row:last-child {
+      border-bottom: none;
+    }
+
+    .metric-value {
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .timeline {
+      margin: 15px 0;
+      padding-left: 20px;
+      border-left: 2px solid #000;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 20px;
+      padding-bottom: 15px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -26px;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      background: #000;
+      border-radius: 50%;
+    }
+
+    .timeline-date {
+      font-size: 9pt;
+      color: #666;
+      font-weight: 600;
+    }
+
+    .timeline-content {
+      font-size: 10pt;
+      margin-top: 3px;
+    }
+
+    .page-break {
+      page-break-before: always;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .final-section {
+      background: #f7f7f7;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding-top: 25px;
+      border-top: 2px solid #000;
+    }
+
+    .footer-brands {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .footer-brand {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .footer-brand-url {
+      font-size: 9pt;
+      color: #666;
+      margin-left: 10px;
+    }
+
+    .footer-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: #999;
+      gap: 20px;
+    }
+
+    .footer-info strong {
+      color: #666;
+    }
+
+    .footer-info a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 8pt;
+      color: #999;
+      text-align: center;
+    }
+
+    .label {
+      display: inline-block;
+      border: 1px solid #000;
+      padding: 2px 6px;
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .small {
+      font-size: 9pt;
+      color: #666;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Propuesta Web Dexeus Mujer</h1>
+    <div class="subtitle">Enfoque Zoopa para rediseño, replatforming y activacion digital sin continuidad de Drupal</div>
+    <div class="date">17 marzo 2026 • Documento de propuesta • Referencias: analisis de dexeus.com y Mayo Clinic Health System</div>
+  </div>
+
+  <div class="exec-summary">
+    <h2>Resumen Ejecutivo</h2>
+    <p><strong>Problema central:</strong> Dexeus Mujer tiene una marca excepcional, datos de autoridad muy fuertes y una presencia multilingue avanzada, pero su ecosistema actual combina deuda tecnica, fragmentacion operativa y una experiencia digital menos clara de lo que exige su posicionamiento clinico.</p>
+    <p><strong>Resultado esperado:</strong> construir una nueva web de referencia en salud femenina que convierta mejor, escale internacionalmente, simplifique la operacion editorial y permita a Zoopa gobernar experiencia, landings, SEO/GEO, datos e integraciones sobre una base moderna, sin mantener Drupal.</p>
+  </div>
+
+  <div class="note-box">
+    <strong>Indice de propuesta</strong><br><br>
+    1. Punto de partida<br>
+    2. Vision de producto web<br>
+    3. Principios UX y contenido<br>
+    4. Arquitectura funcional propuesta<br>
+    5. Estructura actual verificada<br>
+    6. Comparativa Dexeus vs Mayo<br>
+    7. Volumen objetivo de la nueva web<br>
+    8. Journeys prioritarios de usuario<br>
+    9. Colaboracion con la agencia de branding<br>
+    10. Tecnologias de implementacion<br>
+    11. Recomendacion tecnica Zoopa<br>
+    12. Plan general de proyecto<br>
+    13. Alcance de integraciones y operacion<br>
+    14. Observabilidad, friccion y quality control<br>
+    15. Estimacion de diseño<br>
+    16. Criterios de exito
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <div class="section-title">Punto de Partida</div>
+      <div class="section-time">Decision base</div>
+    </div>
+
+    <div class="problem-box">La web actual combina autoridad real y buen contenido con problemas tecnicos claros: stack legacy, hreflang mal resuelto, ausencia de schema, exceso de assets, CTA principal poco visible y arquitectura de home mas editorial que orientada a triage y conversion.</div>
+    <div class="solution-box">La nueva web debe mantener los activos ganadores de Dexeus y adoptar las mejores practicas operativas de Mayo: triage claro, utility bar con accesos clave, templates consistentes, HTML semantico, performance, datos estructurados y flujos orientados a accion.</div>
+    <div class="insight-box">Dexeus no necesita parecerse a Mayo en tono o estetica; necesita apropiarse de sus patrones de claridad operativa y combinarlos con la especializacion, sensibilidad y autoridad de Dexeus Mujer: 1935, primer bebe FIV en Espana, 3.000+ nacimientos al ano, 20.000+ ninos nacidos por FIV y tasas de exito publicadas.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Activo detectado</th>
+        <th>Implicacion</th>
+        <th>Decision propuesta</th>
+      </tr>
+      <tr>
+        <td>Marca especializada y liderazgo historico</td>
+        <td>Ventaja competitiva muy fuerte en ginecologia, obstetricia y fertilidad</td>
+        <td>Construir un relato de autoridad verificable con datos, hitos, equipo y resultados</td>
+      </tr>
+      <tr>
+        <td>6 idiomas y turismo sanitario</td>
+        <td>El canal internacional ya existe y debe reforzarse</td>
+        <td>Disenar la plataforma multilingue como requisito fundacional, no como extension</td>
+      </tr>
+      <tr>
+        <td>Buenas piezas de contenido y segmentacion</td>
+        <td>Hay base editorial valiosa, pero poco sistematizada</td>
+        <td>Pasar de paginas sueltas a templates y taxonomias escalables</td>
+      </tr>
+      <tr>
+        <td>Coexistencia de plataformas y logica legacy</td>
+        <td>Mayor complejidad operativa, tecnica y editorial</td>
+        <td>Unificar el ecosistema en una sola plataforma objetivo y abandonar Drupal</td>
+      </tr>
+    </tbody></table>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <div class="section-title">Vision de Producto Web</div>
+      <div class="section-time">North star</div>
+    </div>
+
+    <div class="copy-box">Objetivo de producto:
+
+Convertir dexeusmujer.com en la plataforma digital de referencia para salud femenina en Europa del Sur, capaz de:
+- orientar rapidamente a cada perfil de paciente
+- captar demanda organica y de paid con landings eficientes
+- reforzar confianza clinica y emocional
+- integrar CRM y automatizacion comercial
+- escalar idiomas, servicios y contenidos sin rehacer el sistema</div>
+
+    <ul class="checklist">
+      <li><div class="checkbox"></div>Homepage con triage claro por necesidades y perfiles, no solo por bloques editoriales.</li>
+      <li><div class="checkbox"></div>Barra superior persistente con CTAs clave: pedir cita, area paciente, contacto / telefono, donacion si aplica.</li>
+      <li><div class="checkbox"></div>Templates nativos para servicio, tratamiento, medico, unidad, localizacion, landing y articulo answer-first.</li>
+      <li><div class="checkbox"></div>Base SEO/GEO avanzada: schema, FAQ, medicos, breadcrumbs, organization, medical organization, llms.txt y hreflang correcto.</li>
+      <li><div class="checkbox"></div>Operativa de marketing preparada para HubSpot, formularios, scoring, landings y experimentacion.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <div class="section-title">Principios UX y Contenido</div>
+      <div class="section-time">Base funcional</div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="label">De Mayo</div>
+        <h4>Triage y claridad</h4>
+        <p>La home debe responder rapido a “que necesito ahora”, “donde voy” y “como contacto”.</p>
+      </div>
+      <div class="card">
+        <div class="label">De Dexeus</div>
+        <h4>Segmentacion empatica</h4>
+        <p>Hablar a perfiles concretos: fertilidad, embarazo, ginecologia, menopausia, paciente internacional, joven, oncologica.</p>
+      </div>
+      <div class="card">
+        <div class="label">Propio Zoopa</div>
+        <h4>Sistema antes que paginas</h4>
+        <p>La experiencia debe diseñarse como una maquina de crecimiento, no como una suma de pantallas aisladas.</p>
+      </div>
+    </div>
+
+    <table>
+      <tbody><tr>
+        <th>Principio</th>
+        <th>Aplicacion</th>
+        <th>Impacto</th>
+      </tr>
+      <tr>
+        <td>Answer-first</td>
+        <td>Las paginas responden primero y desarrollan despues</td>
+        <td>Mejor conversion, SEO y GEO</td>
+      </tr>
+      <tr>
+        <td>Lenguaje de paciente</td>
+        <td>No esconder el valor clinico detras de terminologia fria</td>
+        <td>Menor friccion cognitiva</td>
+      </tr>
+      <tr>
+        <td>Autoridad demostrable</td>
+        <td>Resultados, hitos, volumen asistencial, expertos, acreditaciones</td>
+        <td>Confianza y diferenciacion</td>
+      </tr>
+      <tr>
+        <td>Template rigido por tipologia</td>
+        <td>Servicio, tratamiento, medico, FAQ, localizacion y landing con estructura estable</td>
+        <td>Escalabilidad editorial y mejor rendimiento SEO/GEO</td>
+      </tr>
+      <tr>
+        <td>Rutas reversibles</td>
+        <td>Breadcrumbs, relacionados, search y navegación transversal</td>
+        <td>Evita callejones sin salida</td>
+      </tr>
+    </tbody></table>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <div class="section-title">Arquitectura Funcional Propuesta</div>
+      <div class="section-time">MVP + escalado</div>
+    </div>
+
+    <div class="solution-box">Proponemos una arquitectura de informacion centrada en 6 grandes bloques: especialidades y tratamientos, fertilidad, embarazo y maternidad, equipo medico, centros/localizaciones y conocimiento/health library.</div>
+
+    <div class="copy-box">Estructura recomendada:
+
+/
+- especialidades-y-tratamientos/
+- fertilidad/
+- embarazo-y-maternidad/
+- ginecologia/
+- menopausia/
+- equipo-medico/
+- centros/
+- blog/
+- preguntas-frecuentes/
+- pacientes-internacionales/
+- campus/
+- landings/</div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h4>Templates core</h4>
+        <p>Home, servicio, tratamiento, landing, medico, unidad, localizacion, articulo, FAQ hub, comparativa y pagina de conversion.</p>
+      </div>
+      <div class="card">
+        <h4>Modulos reutilizables</h4>
+        <p>Hero, triage, prueba social, cifras, FAQs, cards de perfil, CTA persistente, testimonios, formularios, related content y sticky nav.</p>
+      </div>
+      <div class="card">
+        <h4>Landings</h4>
+        <p>Family de landings para paid, organic y CRM, mantenidas en el mismo sistema visual para evitar fragmentacion de marca.</p>
+      </div>
+      <div class="card">
+        <h4>Search y navegacion</h4>
+        <p>Buscador visible, menu centrado en necesidades, hub A-Z de servicios y rutas especificas para pacientes internacionales.</p>
+      </div>
+    </div>
+
+    <div class="note-box">La clave no es solo redisenar la home. La clave es crear un sistema de templates y modulos que permita escalar cientos de paginas sin perder consistencia ni depender de rediseño manual continuo.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <div class="section-title">Estructura Actual Verificada</div>
+      <div class="section-time">Dominio + sitemap</div>
+    </div>
+
+    <div class="problem-box">La estructura pública actual no es un único site limpio. Es un ecosistema compuesto por site principal, blog separado, minisites satélite y secciones verticales. Además, el sitemap principal presenta una anomalía: los índices no segmentan correctamente por idioma y devuelven un universo global repetido.</div>
+    <div class="solution-box">La futura plataforma debe unificar experiencia, gobierno SEO y modelo editorial. Aunque algunos satélites puedan mantenerse por razones de negocio, el nuevo core debe tratarse como una arquitectura de plataforma y no como una simple sustitución de páginas.</div>
+
+    <div class="copy-box">Esquema real verificado a partir de robots.txt + sitemap.xml + cabeceras públicas:
+
+www.dexeus.com/robots.txt
+  -&gt; confirma stack Drupal legacy en el core site
+
+www.dexeus.com/sitemap.xml
+  -&gt; sitemapindex
+     -&gt; https://en.dexeus.com/sitemap.xml?page=1
+     -&gt; https://en.dexeus.com/sitemap.xml?page=2
+
+Importante:
+- ambos sitemaps contienen URLs de todos los idiomas y hosts
+- no están realmente segmentados por idioma
+- el índice principal devuelve el mismo universo global para cualquier host
+- el blog no aparece integrado en este sitemap principal</div>
+
+    <table>
+      <tbody><tr>
+        <th>Propiedad</th>
+        <th>Tipo</th>
+        <th>Stack detectado</th>
+        <th>Idiomas verificados</th>
+      </tr>
+      <tr>
+        <td>www.dexeus.com + subdominios</td>
+        <td>Site principal corporativo/asistencial</td>
+        <td>Drupal legacy</td>
+        <td>ES, CA, EN, IT, FR, DE</td>
+      </tr>
+      <tr>
+        <td>www.dexeus.com/blog/</td>
+        <td>Blog / health library separado</td>
+        <td>WordPress + WPML</td>
+        <td>ES, CA, EN, IT, FR, DE</td>
+      </tr>
+      <tr>
+        <td>dexeuscampus.com</td>
+        <td>Minisite formativo / campus</td>
+        <td>WordPress + WooCommerce + WPML</td>
+        <td>ES, CA, EN</td>
+      </tr>
+      <tr>
+        <td>dexeusfoundation.org</td>
+        <td>Minisite fundación</td>
+        <td>WordPress + WPML</td>
+        <td>ES, CA</td>
+      </tr>
+    </tbody></table>
+
+    <div class="insight-box">El ecosistema actual ya opera como multi-plataforma: Drupal para el core, WordPress para blog, WordPress para campus y WordPress para fundación. La futura decisión no es solo “qué CMS usar”, sino cómo gobernar una constelación de propiedades con distinta profundidad editorial e idiomática.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Métrica</th>
+        <th>Dato verificado</th>
+        <th>Lectura estratégica</th>
+      </tr>
+      <tr>
+        <td>URLs en sitemap principal</td>
+        <td>3.209 URLs públicas listadas</td>
+        <td>Volumen alto para una migración controlada; exige inventario, clustering y reglas de consolidación</td>
+      </tr>
+      <tr>
+        <td>URLs únicas reales en sitemap principal</td>
+        <td>2.691 URLs únicas</td>
+        <td>Hay repetición y contaminación entre idiomas/hosts en el propio sitemap</td>
+      </tr>
+      <tr>
+        <td>Hosts verificados en sitemap principal</td>
+        <td>6 hosts: www, cat, en, it, fr, de</td>
+        <td>El core site es realmente multihost, no solo multidioma</td>
+      </tr>
+      <tr>
+        <td>Reparto por host</td>
+        <td>www 656, cat 612, en 369, fr 359, it 355, de 340</td>
+        <td>ES y CA concentran más profundidad; el resto parecen más acotados</td>
+      </tr>
+      <tr>
+        <td>Blog separado</td>
+        <td>Fuera del sitemap principal</td>
+        <td>Hoy el volumen real del ecosistema es mayor que el que refleja el sitemap del core</td>
+      </tr>
+    </tbody></table>
+
+    <div class="note-box">Estimación operativa de volumen del core site: entre 2.700 y 3.200 URLs públicas a revisar, antes de contar blog, campus y fundación. Para planificación de proyecto, no conviene tratar esto como un simple “rediseño web”, sino como una migración de ecosistema.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Bloque / patrón detectado</th>
+        <th>Ejemplos verificados</th>
+        <th>Interpretación</th>
+      </tr>
+      <tr>
+        <td>Institucional / equipo</td>
+        <td>/quienes-somos, /who-we-are, /qui-som, /chi-siamo, /qui-sommes-nous, /uber-uns</td>
+        <td>Es el bloque más voluminoso del sitemap actual</td>
+      </tr>
+      <tr>
+        <td>Áreas clínicas principales</td>
+        <td>/ginecologia, /embarazo, /cancer, /genetica y equivalentes traducidos</td>
+        <td>Bloque estructural del core site</td>
+      </tr>
+      <tr>
+        <td>Vertical específica</td>
+        <td>/salud-varon, /mens-health, /sante-homme, /salute-maschile, /gesundheit-mannes</td>
+        <td>Existe como mini vertical dentro del core y además está traducida a 6 idiomas</td>
+      </tr>
+      <tr>
+        <td>Landing / microsite-like</td>
+        <td>/zoom-dexeus-professional/...</td>
+        <td>Indicio claro de landings o flujos independientes dentro del core</td>
+      </tr>
+      <tr>
+        <td>Blog separado</td>
+        <td>/blog/, /blog/en/, /blog/ca/, /blog/fr/, /blog/it/, /blog/de/</td>
+        <td>La health library vive hoy en una plataforma separada</td>
+      </tr>
+    </tbody></table>
+
+    <div class="metrics-box">
+      <h4>Volumen estimado del ecosistema</h4>
+      <div class="metric-row">
+        <span>Core site público listado en sitemap</span>
+        <span class="metric-value">2.691 URLs únicas</span>
+      </div>
+      <div class="metric-row">
+        <span>Blog ES</span>
+        <span class="metric-value">583 posts</span>
+      </div>
+      <div class="metric-row">
+        <span>Blog CA / EN / FR / IT / DE</span>
+        <span class="metric-value">187 / 112 / 114 / 119 / 105 posts</span>
+      </div>
+      <div class="metric-row">
+        <span>Blog multilingüe total</span>
+        <span class="metric-value">1.220 URLs de posts localizados</span>
+      </div>
+      <div class="metric-row">
+        <span>Dexeus Campus</span>
+        <span class="metric-value">41 páginas + 115 posts/productos visibles por API</span>
+      </div>
+      <div class="metric-row">
+        <span>Dexeus Foundation</span>
+        <span class="metric-value">34 páginas + 6 posts visibles por API</span>
+      </div>
+    </div>
+
+    <div class="insight-box">Lectura práctica para la propuesta: si Zoopa asume el nuevo core, conviene separar desde el inicio tres decisiones distintas: 1) qué entra en la migración inicial, 2) qué satélites siguen como propiedades autónomas, y 3) qué piezas deben unificarse visual y semánticamente aunque sigan en dominios distintos.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <div class="section-title">Comparativa Dexeus vs Mayo</div>
+      <div class="section-time">Volumen + buenas prácticas</div>
+    </div>
+
+    <div class="solution-box">La comparación útil no es solo estética. Es estructural. Dexeus hoy tiene más complejidad idiomática y más fragmentación de propiedades. Mayo parece tener una estructura pública más limpia, más centrada en localizaciones y especialidades, y una navegación más consistente.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Criterio</th>
+        <th>Dexeus actual</th>
+        <th>Mayo Clinic Health System actual</th>
+        <th>Lectura</th>
+      </tr>
+      <tr>
+        <td>Acceso a sitemap</td>
+        <td>Verificable públicamente</td>
+        <td>Bloqueado por Akamai a agentes automáticos desde esta revisión</td>
+        <td>En Dexeus se ha podido medir el XML real; en Mayo parte del análisis de volumen debe estimarse por páginas oficiales accesibles y estructura visible</td>
+      </tr>
+      <tr>
+        <td>Volumen del core site</td>
+        <td>2.691 URLs únicas detectadas en sitemap principal</td>
+        <td>Estimación de low-thousands, con 37 localizaciones públicas y un directorio de especialidades muy amplio</td>
+        <td>Dexeus es más complejo por multihost y mezcla de propiedades; Mayo parece más compacto y ordenado</td>
+      </tr>
+      <tr>
+        <td>Idiomas del core</td>
+        <td>6 idiomas verificados</td>
+        <td>Monolingüe</td>
+        <td>Dexeus tiene mayor complejidad operativa y SEO internacional</td>
+      </tr>
+      <tr>
+        <td>Blog / health content</td>
+        <td>Blog WordPress separado con 1.220 posts localizados detectados</td>
+        <td>Hometown Health integrado dentro del dominio principal</td>
+        <td>Mayo integra mejor el contenido editorial en su experiencia principal</td>
+      </tr>
+      <tr>
+        <td>Localizaciones</td>
+        <td>Centros y sedes dentro del core, pero no como sistema tan visible</td>
+        <td>37 localizaciones públicas verificadas en el localizador oficial</td>
+        <td>Mayo gana en orden y visibilidad operativa del componente territorial</td>
+      </tr>
+      <tr>
+        <td>Utility CTAs</td>
+        <td>Menos claros y menos persistentes</td>
+        <td>Patient Portal, Pay Bill y Request Appointment como patrón persistente</td>
+        <td>Mayo es mejor en autoservicio y conversión rápida</td>
+      </tr>
+    </tbody></table>
+
+    <div class="note-box">Nota metodológica: en esta revisión, `mayoclinichealthsystem.org/robots.txt` y `sitemap.xml` devolvieron `Access Denied`. Por tanto, la comparación de volumen de Mayo es una estimación razonada a partir de páginas oficiales abiertas en el dominio y de la estructura visible en sus directorios.</div>
+
+    <div class="metrics-box">
+      <h4>Volumen comparado</h4>
+      <div class="metric-row">
+        <span>Dexeus core site verificable</span>
+        <span class="metric-value">2.691 URLs únicas</span>
+      </div>
+      <div class="metric-row">
+        <span>Dexeus ecosistema ampliado</span>
+        <span class="metric-value">4.000+ URLs si se suma blog, campus y fundación</span>
+      </div>
+      <div class="metric-row">
+        <span>Mayo localizaciones verificadas</span>
+        <span class="metric-value">37 páginas/location hubs</span>
+      </div>
+      <div class="metric-row">
+        <span>Mayo especialidades verificadas</span>
+        <span class="metric-value">Directorio muy amplio, aproximadamente 80-90+ servicios</span>
+      </div>
+      <div class="metric-row">
+        <span>Mayo volumen estimado del site</span>
+        <span class="metric-value">Rango razonable: 1.500-3.000 URLs públicas</span>
+      </div>
+    </div>
+
+    <table>
+      <tbody><tr>
+        <th>Mejor práctica</th>
+        <th>Dexeus</th>
+        <th>Mayo</th>
+        <th>Qué debe heredar la nueva web</th>
+      </tr>
+      <tr>
+        <td>Segmentación por perfil</td>
+        <td>Muy fuerte</td>
+        <td>Más funcional que emocional</td>
+        <td>Conservar la empatía y el lenguaje específico de Dexeus</td>
+      </tr>
+      <tr>
+        <td>Triage en home</td>
+        <td>Débil</td>
+        <td>Muy fuerte</td>
+        <td>Adoptar el patrón de entrada por necesidad de Mayo</td>
+      </tr>
+      <tr>
+        <td>Autoservicio</td>
+        <td>Parcial</td>
+        <td>Muy visible</td>
+        <td>Header utilitario persistente con acciones claras</td>
+      </tr>
+      <tr>
+        <td>Autoridad clínica demostrable</td>
+        <td>Muy fuerte en hitos y tasas</td>
+        <td>Muy fuerte en marca paraguas</td>
+        <td>Transformar la autoridad de Dexeus en datos estructurados y activos citables</td>
+      </tr>
+      <tr>
+        <td>Monolingüismo vs internacionalización</td>
+        <td>Muy avanzada</td>
+        <td>No relevante</td>
+        <td>Diseñar un multidioma limpio sin contaminación entre hosts/sitemaps</td>
+      </tr>
+      <tr>
+        <td>Integración editorial</td>
+        <td>Fragmentada</td>
+        <td>Más integrada</td>
+        <td>Unificar contenido, landings y salud editorial en un mismo modelo de plataforma</td>
+      </tr>
+      <tr>
+        <td>Semántica y consistencia</td>
+        <td>Mejorable</td>
+        <td>Alta</td>
+        <td>Templates rígidos y semántica impecable</td>
+      </tr>
+    </tbody></table>
+
+    <div class="insight-box">Síntesis: Dexeus gana en especialización, internacionalización y riqueza de relato clínico. Mayo gana en claridad funcional, limpieza estructural y sentido de sistema. La nueva web debe parecerse a Dexeus en propuesta de valor y a Mayo en orden operacional.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <div class="section-title">Volumen Objetivo de la Nueva Web</div>
+      <div class="section-time">Estimación de alcance</div>
+    </div>
+
+    <div class="solution-box">La nueva web no debería replicar el volumen actual sin filtrar. Debería lanzar con un volumen más controlado, mejor estructurado y con capacidad de crecer después. El objetivo no es “migrarlo todo”, sino “migrar bien lo que debe existir”.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Tipología</th>
+        <th>Estimación lanzamiento</th>
+        <th>Estimación a 12-18 meses</th>
+      </tr>
+      <tr>
+        <td>Páginas institucionales y utilitarias</td>
+        <td>25-40</td>
+        <td>35-50</td>
+      </tr>
+      <tr>
+        <td>Especialidades / servicios / tratamientos</td>
+        <td>80-120</td>
+        <td>120-180</td>
+      </tr>
+      <tr>
+        <td>Páginas de unidades / programas / perfiles de necesidad</td>
+        <td>20-35</td>
+        <td>30-50</td>
+      </tr>
+      <tr>
+        <td>Perfiles médicos</td>
+        <td>70-120</td>
+        <td>100-160</td>
+      </tr>
+      <tr>
+        <td>Centros / localizaciones</td>
+        <td>5-15</td>
+        <td>8-20</td>
+      </tr>
+      <tr>
+        <td>FAQs / hubs temáticos / topics</td>
+        <td>20-40</td>
+        <td>30-60</td>
+      </tr>
+      <tr>
+        <td>Landings de captación</td>
+        <td>20-50</td>
+        <td>50-120</td>
+      </tr>
+      <tr>
+        <td>Health library / blog</td>
+        <td>150-300</td>
+        <td>300-700</td>
+      </tr>
+    </tbody></table>
+
+    <div class="metrics-box">
+      <h4>Estimación global recomendada</h4>
+      <div class="metric-row">
+        <span>Nueva web en lanzamiento</span>
+        <span class="metric-value">390-720 URLs indexables</span>
+      </div>
+      <div class="metric-row">
+        <span>Nueva web a 12-18 meses</span>
+        <span class="metric-value">653-1.340 URLs indexables</span>
+      </div>
+      <div class="metric-row">
+        <span>Posición estratégica</span>
+        <span class="metric-value">Menor que el ecosistema actual, pero mucho más limpia y eficiente</span>
+      </div>
+    </div>
+
+    <div class="copy-box">Sitemap objetivo recomendado:
+
+/sitemap-index.xml
+  /sitemaps/pages.xml
+  /sitemaps/services.xml
+  /sitemaps/treatments.xml
+  /sitemaps/doctors.xml
+  /sitemaps/locations.xml
+  /sitemaps/topics.xml
+  /sitemaps/faqs.xml
+  /sitemaps/landings.xml
+  /sitemaps/blog-1.xml
+  /sitemaps/blog-2.xml
+
+Reglas:
+- no mezclar idiomas en un mismo sitemap
+- no mezclar hosts en un mismo índice
+- máximo control sobre canonicals y hreflang
+- excluir páginas thin, filtros, búsquedas, thank-you pages y duplicados
+- si se mantienen satélites, cada propiedad con su propio sitemap index</div>
+
+    <div class="insight-box">La nueva web no necesita acercarse al volumen bruto del ecosistema actual de Dexeus para ser mejor. Necesita un volumen deliberado: menos URLs inútiles, más páginas con intención, estructura y rendimiento.</div>
+  </div>
+
+  <div class="section page-break">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <div class="section-title">Journeys Prioritarios</div>
+      <div class="section-time">UX + conversion</div>
+    </div>
+
+    <div class="solution-box">Los journeys deben diseñarse como flujos de decisión cortos, medibles y reversibles. El patrón a heredar de Mayo es la claridad operativa; el patrón a preservar de Dexeus es la segmentación por perfil y momento vital.</div>
+
+    <div class="copy-box">Principio de journey para el nuevo site:
+
+Need -&gt; Triage -&gt; Página de servicio / perfil -&gt; Prueba de confianza -&gt; Equipo / centro -&gt; CTA principal -&gt; Captura / cita -&gt; Confirmación -&gt; Nurture / seguimiento
+
+Cada journey debe tener:
+- una entrada clara desde SEO, paid o navegación
+- una promesa visible en el primer scroll
+- una CTA dominante
+- una vía alternativa de contacto
+- contenido de confianza específico
+- medición completa del funnel</div>
+
+    <table>
+      <tbody><tr>
+        <th>Journey prioritario</th>
+        <th>Entrada típica</th>
+        <th>Páginas / módulos clave</th>
+        <th>CTA principal</th>
+        <th>Fricciones a resolver</th>
+      </tr>
+      <tr>
+        <td>Fertilidad / FIV / ovodonacion</td>
+        <td>SEO transaccional, paid, referral médico, marca</td>
+        <td>Hub de fertilidad, comparativa de tratamientos, tasas de exito, FAQs, equipo, testimonios, landing específica</td>
+        <td>Pedir primera valoración</td>
+        <td>Demasiadas opciones, miedo al proceso, falta de claridad del siguiente paso, fricción entre tratamiento e información general</td>
+      </tr>
+      <tr>
+        <td>Donante de ovulos</td>
+        <td>Paid, social, SEO de captación, campañas de awareness</td>
+        <td>Landing de captación, criterios de elegibilidad, beneficios, proceso paso a paso, preguntas frecuentes, formulario corto y precalificación</td>
+        <td>Comprobar si soy candidata</td>
+        <td>Abandono por formularios largos, dudas sobre requisitos, falta de expectativa sobre tiempos y compensación</td>
+      </tr>
+      <tr>
+        <td>Embarazo y parto</td>
+        <td>SEO informacional, marca, recomendación, pacientes actuales</td>
+        <td>Journey cronológico antes-durante-parto-lactancia, tour virtual, equipo obstétrico, plan de seguimiento, clases / escuela</td>
+        <td>Reservar primera visita o seguimiento</td>
+        <td>Necesidades distintas por trimestre, exceso de información no secuenciada, duda sobre profesionales y centros</td>
+      </tr>
+      <tr>
+        <td>Ginecología / menopausia / síntomas</td>
+        <td>SEO de síntomas, SEO de condiciones, blog, búsqueda interna</td>
+        <td>Página de condición, página de servicio, médico, centro, FAQs, contenidos relacionados y CTA contextual</td>
+        <td>Pedir cita ginecológica</td>
+        <td>Lenguaje demasiado clínico, baja conexión entre contenido y acción, poca visibilidad de solución concreta</td>
+      </tr>
+      <tr>
+        <td>Paciente oncológica / preservación de fertilidad</td>
+        <td>Referral clínico, búsqueda urgente, branding</td>
+        <td>Ruta urgente, preservación de fertilidad, equipo, tiempos de respuesta, contacto rápido y contenido de confianza</td>
+        <td>Solicitar atención prioritaria</td>
+        <td>Urgencia alta, ansiedad extrema, riesgo de perder conversiones si el flujo no es inmediato</td>
+      </tr>
+      <tr>
+        <td>Paciente internacional</td>
+        <td>Subdominio idioma, SEO internacional, paid internacional, referral</td>
+        <td>Home internacional, coordinador/a, logística, idioma, alojamientos, proceso, tasas, contacto multicanal</td>
+        <td>Contactar con International Patient Team</td>
+        <td>Desconfianza logística, barrera idiomática, dudas de viaje, tiempos, documentación y coste</td>
+      </tr>
+    </tbody></table>
+
+    <table>
+      <tbody><tr>
+        <th>Servicio principal</th>
+        <th>Patrón Mayo que conviene heredar</th>
+        <th>Adaptación Dexeus recomendada</th>
+      </tr>
+      <tr>
+        <td>Fertilidad</td>
+        <td>Triage por necesidad y CTA siempre visible</td>
+        <td>Triage por objetivo: embarazo natural, FIV, ovodonación, ROPA, preservación, madre soltera</td>
+      </tr>
+      <tr>
+        <td>Embarazo</td>
+        <td>Flujo funcional y reversible</td>
+        <td>Journey por etapas del embarazo con hitos clínicos y contenidos asociados</td>
+      </tr>
+      <tr>
+        <td>Ginecología</td>
+        <td>Condición -&gt; especialidad -&gt; cita</td>
+        <td>Síntoma / problema -&gt; servicio -&gt; profesional -&gt; reserva</td>
+      </tr>
+      <tr>
+        <td>Oncología</td>
+        <td>Claridad operativa</td>
+        <td>Fast track oncológico con respuesta prioritaria y prueba de confianza visible</td>
+      </tr>
+      <tr>
+        <td>Internacional</td>
+        <td>Utility CTAs y estructura limpia</td>
+        <td>Páginas de confianza, logística, idiomas y contacto con coordinador humano</td>
+      </tr>
+    </tbody></table>
+
+    <div class="metrics-box">
+      <h4>KPIs por journey</h4>
+      <div class="metric-row">
+        <span>CTR del CTA principal por tipología</span>
+        <span class="metric-value">Objetivo por plantilla</span>
+      </div>
+      <div class="metric-row">
+        <span>Form open rate y form completion rate</span>
+        <span class="metric-value">Crítico en fertilidad y donación</span>
+      </div>
+      <div class="metric-row">
+        <span>Lead-to-appointment rate</span>
+        <span class="metric-value">KPI de calidad, no solo de captación</span>
+      </div>
+      <div class="metric-row">
+        <span>Tiempo medio hasta conversión</span>
+        <span class="metric-value">Especialmente relevante en journeys complejos</span>
+      </div>
+    </div>
+
+    <div class="insight-box">El diseño del nuevo site debe asumir que no existe un único journey universal. Fertilidad, donación, embarazo, ginecología, oncología e internacional requieren lógica de conversión distinta, distinta longitud de formulario y distinta densidad de confianza.</div>
+  </div>
+
+  <div class="section page-break">
+    <div class="section-header">
+      <div class="section-number">9</div>
+      <div class="section-title">Colaboracion con la Agencia de Branding</div>
+      <div class="section-time">Decision critica</div>
+    </div>
+
+    <div class="problem-box">Si la agencia de branding diseña cada pagina futura, el proyecto se vuelve lento, caro y dificil de operar. Si solo entrega identidad de alto nivel sin traduccion digital, Zoopa tendra que reinterpretar demasiado.</div>
+    <div class="solution-box">El mejor modelo es intermedio: la agencia define identidad y reglas, y Zoopa traduce eso a sistema digital, templates y ejecucion continua.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Modelo</th>
+        <th>Fortalezas</th>
+        <th>Debilidades</th>
+        <th>Recomendacion</th>
+      </tr>
+      <tr>
+        <td>Libreria de elementos solamente</td>
+        <td>Rapido, barato, deja libertad a producto</td>
+        <td>Insuficiente para un site complejo; demasiada interpretacion posterior</td>
+        <td>Valido solo si Zoopa asume toda la definicion UX posterior</td>
+      </tr>
+      <tr>
+        <td>Paginas tipo + libreria de componentes</td>
+        <td>Da direccion visual real y permite sistematizar desarrollo</td>
+        <td>Exige buena coordinacion entre branding y equipo digital</td>
+        <td><strong>Opcion recomendada</strong></td>
+      </tr>
+      <tr>
+        <td>Diseno de todas las paginas por branding</td>
+        <td>Control visual maximo a corto plazo</td>
+        <td>No operativo, poco escalable, frena evoluciones y landings</td>
+        <td>No recomendado</td>
+      </tr>
+      <tr>
+        <td>Zoopa diseña sistema y paginas sin agencia</td>
+        <td>Maxima velocidad y coherencia digital</td>
+        <td>Puede generar fricciones si la marca se redefine en paralelo</td>
+        <td>Solo recomendable si branding ya esta cerrado</td>
+      </tr>
+    </tbody></table>
+
+    <div class="copy-box">Modelo operativo propuesto branding + Zoopa:
+
+1. La agencia de branding define:
+- principios de marca
+- tono visual
+- tipografia, color, iconografia
+- sistema fotografico / ilustrativo
+- reglas de composicion
+
+2. Zoopa define y produce:
+- UX y arquitectura de informacion
+- design system digital
+- componentes funcionales
+- paginas tipo prioritarias
+- reglas responsive
+- templates CMS
+- landings y paginas evolutivas
+
+3. Gobernanza compartida:
+- aprobacion de foundations por branding
+- aprobacion de experiencia y rendimiento por Zoopa
+- comité corto de decision para evitar bloqueos</div>
+
+    <div class="insight-box">La propuesta adjunta refuerza esta conclusion: lo operativo es trabajar con foundations de marca, componentes y paginas arquetipo. El diseno de todas las paginas futuras no escala y bloquea la evolucion de landings, SEO y crecimiento continuo.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">10</div>
+      <div class="section-title">Tecnologias de Implementacion</div>
+      <div class="section-time">Comparativa</div>
+    </div>
+
+    <table>
+      <tbody><tr>
+        <th>Opcion</th>
+        <th>Descripcion</th>
+        <th>Fortalezas</th>
+        <th>Debilidades</th>
+      </tr>
+      <tr>
+        <td>WordPress nativo custom theme</td>
+        <td>Frontend y CMS en WordPress con tema a medida, bloques/modulos custom y stack server-side</td>
+        <td>Menor complejidad, mejor operativa editorial, coste controlado, SEO robusto, velocidad de salida alta</td>
+        <td>Menos flexibilidad futura que un headless puro; performance depende mucho de buena implementacion</td>
+      </tr>
+      <tr>
+        <td>WordPress headless + Next.js</td>
+        <td>WordPress solo como CMS y frontend desacoplado en Next.js</td>
+        <td>Maximo control UX, alto rendimiento, gran escalabilidad y libertad tecnica</td>
+        <td>Mas coste, mas complejidad editorial/devops, preview y landings suelen requerir mas trabajo</td>
+      </tr>
+      <tr>
+        <td>WordPress headless + Astro</td>
+        <td>CMS WordPress y frontend ligero con Astro, ideal para contenido y SSR/SSG</td>
+        <td>Muy buen rendimiento, HTML limpio, excelente para SEO y contenido</td>
+        <td>Menor ecosistema que Next para casos complejos y personalizacion avanzada</td>
+      </tr>
+      <tr>
+        <td>CMS headless dedicado + Next.js / Astro</td>
+        <td>Strapi, Sanity o Contentful como CMS; frontend desacoplado para toda la experiencia</td>
+        <td>Modelo muy limpio para multidioma, contenido estructurado, APIs y escalabilidad futura</td>
+        <td>Mayor complejidad, coste y dependencia de equipo tecnico maduro; menos amigable si el equipo quiere una operativa WordPress clasica</td>
+      </tr>
+      <tr>
+        <td>WordPress + HubSpot para landings separadas</td>
+        <td>Site principal en WordPress y parte de las campañas en HubSpot CMS</td>
+        <td>Agilidad para marketing y automatizacion directa</td>
+        <td>Fragmenta marca, analitica, SEO y mantenimiento; duplica sistemas</td>
+      </tr>
+    </tbody></table>
+
+    <div class="solution-box">Queda descartado mantener Drupal. Las dos rutas serias son: WordPress unico con desarrollo nativo a medida, o arquitectura desacoplada con frontend moderno y CMS estructurado. La eleccion depende del equilibrio que Dexeus quiera entre autonomia editorial clasica y ambicion de producto digital.</div>
+
+    <div class="note-box">Valoracion de la propuesta adjunta: es especialmente solida en SEO tecnico, GEO, modelado de templates, estructura de contenidos y definicion de stack desacoplado. La incorporamos como referencia valida si Dexeus quiere maximizar rendimiento y escalabilidad, aunque para equipos con fuerte necesidad de autonomia editorial WordPress sigue siendo una opcion muy competitiva.</div>
+
+    <div class="solution-box">Ajuste derivado de los datos adjuntos: el site ya mueve aproximadamente <strong>276.000 visitas mensuales</strong> y el plan SEO/GEO aspira a crecimiento adicional. La infraestructura objetivo no debe dimensionarse para el tráfico actual medio, sino para soportar campañas, picos de demanda y un escenario razonable de <strong>450.000-700.000 sesiones/mes</strong> sin degradación perceptible.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Requisito de servidor</th>
+        <th>Recomendación</th>
+        <th>Motivo</th>
+      </tr>
+      <tr>
+        <td>CDN y edge caching</td>
+        <td>Obligatorio</td>
+        <td>Reducir latencia, absorber picos de tráfico, descargar origen y servir activos globalmente</td>
+      </tr>
+      <tr>
+        <td>Caché de página y objeto</td>
+        <td>Obligatorio</td>
+        <td>WordPress no debe renderizar en caliente la mayoría del tráfico anónimo</td>
+      </tr>
+      <tr>
+        <td>Arquitectura productiva</td>
+        <td>2 nodos app + 1 base de datos gestionada + 1 capa cache</td>
+        <td>Alta disponibilidad básica y margen para mantenimiento sin caída</td>
+      </tr>
+      <tr>
+        <td>Capacidad mínima por nodo app</td>
+        <td>4-8 vCPU y 8-16 GB RAM</td>
+        <td>Escenario razonable para 300k+ visitas/mes con crecimiento y campañas</td>
+      </tr>
+      <tr>
+        <td>Base de datos</td>
+        <td>Gestionada, con réplicas/snapshots automáticos</td>
+        <td>Seguridad operativa, backups y menor riesgo en picos o despliegues</td>
+      </tr>
+      <tr>
+        <td>Almacenamiento de media</td>
+        <td>Object storage + image optimization</td>
+        <td>Escalar assets, reducir peso y evitar que el origen haga de repositorio pesado</td>
+      </tr>
+      <tr>
+        <td>WAF / protección</td>
+        <td>Obligatorio</td>
+        <td>Mitigar bots, abuso y tráfico malicioso sin repetir los bloqueos opacos del caso Mayo</td>
+      </tr>
+      <tr>
+        <td>Observabilidad</td>
+        <td>Logs, uptime, APM y alertas</td>
+        <td>Controlar impacto de campañas, releases e integraciones</td>
+      </tr>
+    </tbody></table>
+
+    <div class="note-box">Inferencia basada en datos disponibles: con 276k visitas/mes, 38.920 visitas mensuales a contacto y expectativa de crecimiento SEO, conviene diseñar la plataforma con un margen de al menos 2-3x sobre el tráfico medio actual. Eso permite absorber campañas, estacionalidad y expansión internacional sin redimensionados urgentes.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">11</div>
+      <div class="section-title">Recomendacion Tecnica Zoopa</div>
+      <div class="section-time">Target stack</div>
+    </div>
+
+    <ul class="checklist">
+      <li><div class="checkbox"></div>Descartar completamente Drupal del escenario futuro y planificar una migracion integral.</li>
+      <li><div class="checkbox"></div>Elegir entre dos rutas viables: WordPress unico con desarrollo nativo a medida, o frontend desacoplado con Next.js / Astro y CMS estructurado.</li>
+      <li><div class="checkbox"></div>Desarrollo basado en libreria de componentes, templates y modularidad editorial.</li>
+      <li><div class="checkbox"></div>Multidioma de origen con arquitectura clara por idioma y gobierno de traducciones.</li>
+      <li><div class="checkbox"></div>Integracion HubSpot para formularios, tracking, workflows, lead routing y medicion de conversion.</li>
+      <li><div class="checkbox"></div>Landings en el mismo sistema visual y tecnico siempre que sea posible.</li>
+      <li><div class="checkbox"></div>SEO/GEO by design: schema, FAQs, perfiles de medico, organization data, redirecciones y control semantico.</li>
+      <li><div class="checkbox"></div>Analitica moderna: GA4, GTM, eventos, conversiones y mapas de atribucion alineados con CRM.</li>
+      <li><div class="checkbox"></div>Busqueda avanzada multiidioma, FAQs estructuradas y perfiles de medico con datos enriquecidos.</li>
+    </ul>
+
+    <div class="metrics-box">
+      <h4>Decisiones recomendadas</h4>
+      <div class="metric-row">
+        <span>CMS objetivo</span>
+        <span class="metric-value">WordPress unico o CMS headless; Drupal descartado</span>
+      </div>
+      <div class="metric-row">
+        <span>Modelo de diseño</span>
+        <span class="metric-value">Sistema + templates + componentes</span>
+      </div>
+      <div class="metric-row">
+        <span>Gestion de landings</span>
+        <span class="metric-value">Dentro del mismo stack, con modulos especificos</span>
+      </div>
+      <div class="metric-row">
+        <span>CRM / automatizacion</span>
+        <span class="metric-value">HubSpot integrado, no aislado</span>
+      </div>
+      <div class="metric-row">
+        <span>Objetivo tecnico</span>
+        <span class="metric-value">HTML semantico, schema completo, rendimiento premium</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section page-break">
+    <div class="section-header">
+      <div class="section-number">12</div>
+      <div class="section-title">Plan General de Proyecto</div>
+      <div class="section-time">16-24 semanas</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Fase 0 · 2-3 semanas</div>
+        <div class="timeline-content">Discovery, auditoria de activos, decision de stack objetivo, mapa de stakeholders, inventario de contenidos, estrategia de migracion SEO y blueprint de medicion (tracking, funnel y atribucion).</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Fase 1 · 3-4 semanas</div>
+        <div class="timeline-content">UX, arbol web, journeys, page archetypes, backlog funcional, modelo multidioma, modelo de datos, integraciones, taxonomia de campañas y plan de instrumentacion GTM + GA4 + HubSpot.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Fase 2 · 4-5 semanas</div>
+        <div class="timeline-content">Design system digital, componentes, paginas tipo prioritarias, lineas editoriales y alineacion con branding. Validacion responsive y accesibilidad.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Fase 3 · 6-8 semanas</div>
+        <div class="timeline-content">Desarrollo, templates, busqueda, schema, integracion HubSpot, tracking code, GTM, GA4, eventos, portal de formularios y contenidos piloto en ES, CA y EN.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Fase 4 · 2-4 semanas</div>
+        <div class="timeline-content">Carga y QA editorial, redirecciones 301, test multidioma, validacion SEO/GEO, validacion de funnel y atribucion, formacion, hardening y salida a produccion.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Fase 5 · continuo</div>
+        <div class="timeline-content">Optimizacion post-lanzamiento: CRO, landings, SEO/GEO, nuevos modulos, expansion de idiomas restantes y roadmap evolutivo.</div>
+      </div>
+    </div>
+
+    <table>
+      <tbody><tr>
+        <th>Workstream</th>
+        <th>Lider natural</th>
+        <th>Participacion del cliente</th>
+      </tr>
+      <tr>
+        <td>Estrategia digital y UX</td>
+        <td>Zoopa</td>
+        <td>Validacion de negocio, servicios y prioridades</td>
+      </tr>
+      <tr>
+        <td>Brand foundations</td>
+        <td>Agencia de branding</td>
+        <td>Aprobacion de posicionamiento y direccion creativa</td>
+      </tr>
+      <tr>
+        <td>Diseño de sistema digital</td>
+        <td>Zoopa</td>
+        <td>Feedback rapido y criterios de aprobacion claros</td>
+      </tr>
+      <tr>
+        <td>Contenido, traducciones y validacion medica</td>
+        <td>Dexeus</td>
+        <td>Owner interno por linea de servicio e idioma</td>
+      </tr>
+      <tr>
+        <td>Implementacion tecnica</td>
+        <td>Zoopa</td>
+        <td>IT / legal / seguridad para revisiones puntuales</td>
+      </tr>
+      <tr>
+        <td>SEO tecnico y GEO</td>
+        <td>Zoopa</td>
+        <td>Validacion de contenido medico, prioridades de negocio y claims verificables</td>
+      </tr>
+    </tbody></table>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">13</div>
+      <div class="section-title">Alcance de Integraciones y Operacion</div>
+      <div class="section-time">Business ready</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h4>HubSpot</h4>
+        <p>Formularios, eventos, lead routing, scoring, lifecycle, nurtures, sincronizacion de conversiones y reporting por linea de servicio.</p>
+      </div>
+      <div class="card">
+        <h4>Landings</h4>
+        <p>Templates especificos para campañas con variantes por idioma, servicio, canal y objetivo de conversion.</p>
+      </div>
+      <div class="card">
+        <h4>Multidioma</h4>
+        <p>Modelo escalable por idioma, control editorial, slugs, metadata, hreflang, revisiones y gobernanza de traduccion.</p>
+      </div>
+      <div class="card">
+        <h4>Migracion</h4>
+        <p>Inventario de contenidos actuales, decision keep / merge / rewrite / retire, y plan de redirecciones 301 al abandonar definitivamente Drupal.</p>
+      </div>
+      <div class="card">
+        <h4>SEO / GEO</h4>
+        <p>Organization, MedicalOrganization, FAQPage, Physician, breadcrumbs, citas verificables, llms.txt y estructura answer-first por tipologia.</p>
+      </div>
+    </div>
+
+    <div class="insight-box">El exito no depende solo de la nueva web. Depende de que marketing, contenido, CRM, SEO, paid y operacion editorial trabajen en un unico sistema y con un mismo modelo de medicion.</div>
+
+    <div class="solution-box">Recomendacion martech: usar HubSpot como capa de campaña, captacion y seguimiento de leads; usar GA4 como capa de trafico y comportamiento; usar GTM como capa de instrumentacion; y, si Dexeus quiere reporting directivo sólido entre marketing y negocio, añadir BigQuery + Looker Studio o Power BI como capa de consolidacion.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Módulo HubSpot</th>
+        <th>Nivel recomendado</th>
+        <th>Necesidad cubierta</th>
+      </tr>
+      <tr>
+        <td>Marketing Hub</td>
+        <td>Professional como mínimo</td>
+        <td>Emails de campaña, automatizaciones, formularios, lead scoring, campañas, landing pages y reporting de marketing</td>
+      </tr>
+      <tr>
+        <td>Sales Hub</td>
+        <td>Professional si el equipo comercial opera en HubSpot</td>
+        <td>Pipeline, handoff marketing-sales, tareas, secuencias, seguimiento comercial y revenue attribution más operativo</td>
+      </tr>
+      <tr>
+        <td>Data Hub / Operations Hub</td>
+        <td>Professional recomendable</td>
+        <td>Sincronización con sistemas clínicos, calidad de datos, mappings custom, procesos y datasets</td>
+      </tr>
+      <tr>
+        <td>Content Hub</td>
+        <td>Opcional</td>
+        <td>Solo si Dexeus quiere alojar parte de las landings o microsites dentro del CMS de HubSpot</td>
+      </tr>
+      <tr>
+        <td>Service Hub</td>
+        <td>Opcional</td>
+        <td>Solo si se quiere usar HubSpot para tickets, atención o post-lead más estructurado</td>
+      </tr>
+    </tbody></table>
+
+    <div class="copy-box">Aproximación de stack HubSpot recomendado para Dexeus:
+
+Escenario base recomendado:
+- Marketing Hub Professional
+- Data Hub / Operations Hub Professional
+
+Escenario recomendado si ventas/comercial trabajan dentro de HubSpot:
+- Marketing Hub Professional
+- Sales Hub Professional
+- Data Hub / Operations Hub Professional
+
+Escenario enterprise:
+- Marketing Hub Enterprise
+- Sales Hub Professional o Enterprise
+- Data Hub / Operations Hub Professional o Enterprise
+
+Razón:
+- hacen campañas de emailing
+- necesitan workflows
+- necesitan campañas, scoring y atribución
+- previsiblemente requerirán integración con sistemas externos
+- la complejidad multidioma y multicanal hace peligrosa una configuración “mínima”</div>
+
+    <table>
+      <tbody><tr>
+        <th>Capacidad HubSpot</th>
+        <th>Valor para Dexeus</th>
+        <th>Recomendacion</th>
+      </tr>
+      <tr>
+        <td>Landing pages nativas</td>
+        <td>Templates, publicación, programación, SEO básico, featured image, idioma, canonical, snippets de head/footer y asociación a campañas</td>
+        <td>Muy útil para campañas rápidas y experimentación; no lo usaría como stack paralelo permanente para todas las landings si queremos máxima coherencia de plataforma</td>
+      </tr>
+      <tr>
+        <td>Email marketing</td>
+        <td>Newsletters, campañas promocionales, nurturing, segmentación y reporting por envío</td>
+        <td>Imprescindible para Dexeus; se debe plantear con Marketing Hub Professional como base mínima</td>
+      </tr>
+      <tr>
+        <td>Asociación a campañas</td>
+        <td>Agrupa assets, presupuesto, metas y performance en un único objeto de campaña</td>
+        <td>Usarlo como capa estándar de gobierno de campañas</td>
+      </tr>
+      <tr>
+        <td>Formularios y Forms API</td>
+        <td>Captura de leads con envío directo a CRM, workflows y lifecycle</td>
+        <td>Usar formularios HubSpot o Forms API en páginas externas críticas</td>
+      </tr>
+      <tr>
+        <td>Tracking code</td>
+        <td>Tracking automático en páginas HubSpot y posibilidad de medir dominios externos</td>
+        <td>Instalarlo en toda la plataforma objetivo y declarar dominios externos si aplica</td>
+      </tr>
+      <tr>
+        <td>Funnel reports</td>
+        <td>Embudo por lifecycle, deals o custom events</td>
+        <td>Usarlo para lead funnel y pipeline comercial, no como sustituto único de analítica web</td>
+      </tr>
+      <tr>
+        <td>Attribution reports</td>
+        <td>Modelos de atribución para contactos, deals y revenue</td>
+        <td>Muy útil para atribución de marketing y revenue si la gobernanza CRM es buena</td>
+      </tr>
+      <tr>
+        <td>Ads attribution</td>
+        <td>Asocia clic publicitario, conversión, contacto y en algunos casos negocio</td>
+        <td>Conectar cuentas de Google / Meta / LinkedIn y mantener auto-tagging disciplinado</td>
+      </tr>
+      <tr>
+        <td>Email automation y nurturing</td>
+        <td>Secuencias de nutrición, follow-ups y activación por comportamiento</td>
+        <td>Clave para paciente potencial, donación, fertilidad e internacional</td>
+      </tr>
+    </tbody></table>
+
+    <div class="copy-box">Política recomendada para landings:
+
+1. Landings core y evergreen:
+- dentro de la plataforma principal
+- mismo sistema visual, SEO y analítica
+- HubSpot para forms, workflows, scoring y campaign association
+
+2. Landings de campaña rápida o test:
+- opcionalmente en HubSpot si la velocidad compensa
+- solo para acciones muy tácticas, temporales o experimentales
+- siempre con nomenclatura de UTMs, tracking code, consentimiento y misma identidad visual
+
+3. Regla de gobierno:
+- no crear una “segunda web” desordenada en HubSpot
+- HubSpot como acelerador de marketing, no como ecosistema paralelo sin control</div>
+
+    <table>
+      <tbody><tr>
+        <th>Capa</th>
+        <th>Sistema recomendado</th>
+        <th>Función</th>
+      </tr>
+      <tr>
+        <td>Tracking de tráfico</td>
+        <td>Google Tag Manager + GA4</td>
+        <td>Medir sesiones, fuentes, eventos, scroll, CTA clicks, formularios, llamadas, reservas y comportamiento onsite</td>
+      </tr>
+      <tr>
+        <td>Tracking de leads y funnel</td>
+        <td>HubSpot</td>
+        <td>Lead source, lifecycle stages, MQL, SQL, opportunity, customer, workflows y ownership comercial</td>
+      </tr>
+      <tr>
+        <td>Atribución marketing</td>
+        <td>HubSpot + GA4</td>
+        <td>HubSpot para contacto/deal/revenue attribution; GA4 para adquisición y performance de canal a nivel sesión</td>
+      </tr>
+      <tr>
+        <td>Consolidación y reporting ejecutivo</td>
+        <td>BigQuery + Looker Studio o Power BI</td>
+        <td>Unificar web, CRM, campañas y negocio en un cuadro de mando más fiable que cualquier herramienta aislada</td>
+      </tr>
+    </tbody></table>
+
+    <div class="metrics-box">
+      <h4>Datos de contexto incorporados</h4>
+      <div class="metric-row">
+        <span>Tráfico mensual aproximado del site</span>
+        <span class="metric-value">276.000 visitas/mes</span>
+      </div>
+      <div class="metric-row">
+        <span>Visitas mensuales a contacto</span>
+        <span class="metric-value">38.920</span>
+      </div>
+      <div class="metric-row">
+        <span>Artículos publicados</span>
+        <span class="metric-value">3.704</span>
+      </div>
+      <div class="metric-row">
+        <span>Artículos que realmente aportan tráfico</span>
+        <span class="metric-value">172</span>
+      </div>
+      <div class="metric-row">
+        <span>Keywords no cubiertas detectadas</span>
+        <span class="metric-value">500 keywords / 250.000+ búsquedas mensuales agregadas</span>
+      </div>
+    </div>
+
+    <div class="note-box">Recomendación operativa: no intentar resolver tráfico, funnel y atribución en una sola herramienta. HubSpot es excelente para seguimiento de leads, campañas y revenue attribution; GA4 es mejor para tráfico y comportamiento web; el reporting de dirección necesita una capa consolidada si la inversión en paid y CRM va a crecer.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Embudo a seguir</th>
+        <th>Definición recomendada</th>
+        <th>Sistema principal</th>
+      </tr>
+      <tr>
+        <td>Acquisition funnel</td>
+        <td>Sesión &gt; vista de landing &gt; interacción &gt; envío de formulario / clic de contacto</td>
+        <td>GA4</td>
+      </tr>
+      <tr>
+        <td>Lead funnel</td>
+        <td>Lead &gt; MQL &gt; SQL &gt; oportunidad &gt; paciente / cliente</td>
+        <td>HubSpot</td>
+      </tr>
+      <tr>
+        <td>Revenue funnel</td>
+        <td>Campaña &gt; contacto atribuido &gt; deal &gt; won revenue</td>
+        <td>HubSpot</td>
+      </tr>
+      <tr>
+        <td>Executive funnel</td>
+        <td>Canal &gt; coste &gt; leads &gt; oportunidades &gt; ingresos</td>
+        <td>Warehouse + BI</td>
+      </tr>
+    </tbody></table>
+
+    <div class="insight-box">Si Dexeus contrata HubSpot Marketing Hub Professional o Enterprise, la herramienta cubre bien campañas, funnels y buena parte de la atribución. Aun así, no sustituye a una implementación seria de GA4 ni a una capa de reporting consolidado para dirección.</div>
+  </div>
+
+  <div class="section page-break">
+    <div class="section-header">
+      <div class="section-number">14</div>
+      <div class="section-title">Observabilidad, Friccion y Quality Control</div>
+      <div class="section-time">Operación continua</div>
+    </div>
+
+    <div class="solution-box">En un site sanitario de alto tráfico no basta con medir sesiones y formularios enviados. Hay que observar comportamiento, detectar caídas de rendimiento, aislar fricciones por idioma/servicio/dispositivo y convertir ese aprendizaje en mejoras continuas de conversión.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Capa de observación</th>
+        <th>Sistema recomendado</th>
+        <th>Qué permite ver</th>
+      </tr>
+      <tr>
+        <td>Analítica web</td>
+        <td>GA4 + GTM + BigQuery</td>
+        <td>Canales, sesiones, eventos, scroll, CTAs, formularios, call clicks, journeys y cohortes</td>
+      </tr>
+      <tr>
+        <td>CRM / lead analytics</td>
+        <td>HubSpot</td>
+        <td>Lifecycle, lead source, scoring, workflow performance, MQL-SQL-opportunity-patient</td>
+      </tr>
+      <tr>
+        <td>UX analytics</td>
+        <td>Microsoft Clarity, Hotjar o Contentsquare</td>
+        <td>Heatmaps, session replays, rage clicks, scroll depth, abandono de formularios</td>
+      </tr>
+      <tr>
+        <td>Call tracking</td>
+        <td>CallTrackingMetrics u opción equivalente</td>
+        <td>Campaña -&gt; llamada -&gt; lead -&gt; cita, especialmente importante si el teléfono sigue siendo canal clave</td>
+      </tr>
+      <tr>
+        <td>Rendimiento técnico</td>
+        <td>Sentry + Datadog/New Relic + uptime monitoring</td>
+        <td>Errores JS, fallos de formularios, latencia, uptime, consumo, cuellos de botella y regresiones</td>
+      </tr>
+      <tr>
+        <td>Experimentación</td>
+        <td>GrowthBook, VWO o AB Tasty</td>
+        <td>Tests de CTA, formularios, copys, layouts y elementos de confianza</td>
+      </tr>
+    </tbody></table>
+
+    <div class="copy-box">Bucle recomendado de depuración de fricción:
+
+1. Detectar:
+- caída de CTR
+- caída de submit rate
+- aumento de abandono
+- empeoramiento de Core Web Vitals
+
+2. Aislar:
+- idioma
+- servicio
+- dispositivo
+- canal
+- plantilla
+
+3. Observar:
+- session replay
+- heatmap
+- field-level analytics
+- errores de formulario
+- logs técnicos
+
+4. Hipótesis:
+- CTA poco visible
+- formulario demasiado largo
+- prueba de confianza insuficiente
+- paso de navegación ambiguo
+- carga lenta o error técnico
+
+5. Corregir:
+- cambio de layout
+- simplificación de formulario
+- mejora de copy
+- fast track de contacto
+- optimización técnica
+
+6. Validar:
+- test A/B
+- medición de uplift
+- decisión de despliegue o rollback</div>
+
+    <table>
+      <tbody><tr>
+        <th>Punto de fricción</th>
+        <th>Cómo lo detectamos</th>
+        <th>Cómo lo corregimos</th>
+      </tr>
+      <tr>
+        <td>El usuario no ve el CTA</td>
+        <td>Heatmaps, scroll depth, CTA CTR</td>
+        <td>Reordenar hero, CTA sticky, bloques de confianza previos a la acción</td>
+      </tr>
+      <tr>
+        <td>El usuario abre formulario y no termina</td>
+        <td>Form open rate vs submit rate, field analytics, replays</td>
+        <td>Reducir campos, dividir pasos, añadir progresión, reforzar privacidad y expectativa</td>
+      </tr>
+      <tr>
+        <td>Mucho tráfico informacional pero poca captación</td>
+        <td>GA4 content groups, pathing, assisted conversions</td>
+        <td>CTAs contextuales, lead magnets, bloques doctor/centro/solución dentro del contenido</td>
+      </tr>
+      <tr>
+        <td>Caída en móvil</td>
+        <td>Segmentación device, CWV mobile, rage clicks</td>
+        <td>Reducir peso, mejorar sticky CTA, simplificar formularios y above-the-fold</td>
+      </tr>
+      <tr>
+        <td>Leads que no avanzan a cita</td>
+        <td>HubSpot lifecycle, SLA comercial, análisis por fuente</td>
+        <td>Lead routing, scoring, workflows, mejor handoff y seguimiento comercial</td>
+      </tr>
+    </tbody></table>
+
+    <table>
+      <tbody><tr>
+        <th>Quality control</th>
+        <th>Cadencia</th>
+        <th>Checklist mínimo</th>
+      </tr>
+      <tr>
+        <td>Pre-lanzamiento</td>
+        <td>Una vez, antes de go-live</td>
+        <td>SEO técnico, renders, formularios, tracking, consent mode, accesibilidad, QA multidioma, redirects, schema, sitemap</td>
+      </tr>
+      <tr>
+        <td>Semanal</td>
+        <td>Operación continua</td>
+        <td>Uptime, errores, submits, leads por fuente, campañas activas, páginas críticas</td>
+      </tr>
+      <tr>
+        <td>Mensual</td>
+        <td>Comité de crecimiento</td>
+        <td>Funnel, fricciones por servicio, landings, contenidos top, search, SEO/GEO, hipótesis CRO</td>
+      </tr>
+      <tr>
+        <td>Trimestral</td>
+        <td>Dirección y roadmap</td>
+        <td>Capacidad técnica, deuda, rendimiento por idioma, atribución, impacto de nuevos módulos y backlog evolutivo</td>
+      </tr>
+    </tbody></table>
+
+    <div class="note-box">En un entorno sanitario hay una condición adicional: la observación debe ser privacy-safe. Session replays y analytics deben enmascarar PII, respetar consentimiento y evitar registrar datos sensibles de salud en herramientas no preparadas para ello.</div>
+
+    <div class="insight-box">La captación no mejora solo con más tráfico. Mejora cuando marketing, UX, tecnología y CRM pueden ver exactamente dónde se rompen los journeys y corrigen esas roturas con ciclos cortos, medibles y repetibles.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">15</div>
+      <div class="section-title">Estimación de Diseño</div>
+      <div class="section-time">Sistema visual + páginas tipo</div>
+    </div>
+
+    <div class="solution-box">La nueva web no debe diseñarse página a página. Debe diseñarse como un sistema visual y funcional capaz de producir cientos de URLs a partir de un número limitado de patrones. La agencia no debería preparar cientos de pantallas, sino un set preciso de foundations, componentes y páginas tipo.</div>
+
+    <div class="problem-box">Si la agencia intenta diseñar una por una las páginas futuras, el proyecto se encarece, ralentiza aprobaciones y compromete la escalabilidad de WordPress, de las landings y del roadmap evolutivo.</div>
+
+    <table>
+      <tbody><tr>
+        <th>Elemento de diseño</th>
+        <th>Volumen recomendado</th>
+        <th>Qué debería cubrir</th>
+      </tr>
+      <tr>
+        <td>Foundations</td>
+        <td>1 sistema base completo</td>
+        <td>Tipografía, color, grid, espaciado, radios, iconografía, fotografía, motion y criterios responsive</td>
+      </tr>
+      <tr>
+        <td>Componentes reutilizables</td>
+        <td>25-40</td>
+        <td>Héroes, CTAs, cards, formularios, FAQs, testimonios, métricas, listados, navegación, trust blocks y módulos de captación</td>
+      </tr>
+      <tr>
+        <td>Patrones de composición</td>
+        <td>8-12</td>
+        <td>Cómo se combinan los componentes en estructuras repetibles para páginas largas, cortas, listings y landings</td>
+      </tr>
+      <tr>
+        <td>Páginas tipo</td>
+        <td>12-18</td>
+        <td>Arquetipos completos listos para desarrollo y reutilización editorial</td>
+      </tr>
+      <tr>
+        <td>Variantes de landing</td>
+        <td>4-6</td>
+        <td>Paid, evergreen SEO, lead magnet, evento, internacional y tratamiento</td>
+      </tr>
+      <tr>
+        <td>Variantes de hero / CTA / formularios</td>
+        <td>8-12</td>
+        <td>Versiones para especialidad, médico, internacional, fertilidad, embarazo y campañas</td>
+      </tr>
+    </tbody></table>
+
+    <div class="metrics-box">
+      <h4>Estimación práctica para la agencia</h4>
+      <div class="metric-row">
+        <span>Páginas tipo recomendadas</span>
+        <span class="metric-value">12-18</span>
+      </div>
+      <div class="metric-row">
+        <span>Componentes/modulos</span>
+        <span class="metric-value">25-40</span>
+      </div>
+      <div class="metric-row">
+        <span>Patrones de layout</span>
+        <span class="metric-value">8-12</span>
+      </div>
+      <div class="metric-row">
+        <span>Volumen gráfico total razonable</span>
+        <span class="metric-value">medio-alto, pero sistematizado; no masivo en pantallas únicas</span>
+      </div>
+    </div>
+
+    <table>
+      <tbody><tr>
+        <th>Página tipo</th>
+        <th>Prioridad</th>
+        <th>Responsable natural</th>
+      </tr>
+      <tr>
+        <td>Home principal</td>
+        <td>Alta</td>
+        <td>Branding + Zoopa</td>
+      </tr>
+      <tr>
+        <td>Home de línea de servicio / unidad</td>
+        <td>Alta</td>
+        <td>Zoopa con validación de branding</td>
+      </tr>
+      <tr>
+        <td>Página de especialidad</td>
+        <td>Alta</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Página de tratamiento</td>
+        <td>Alta</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Página de problema / condición</td>
+        <td>Alta</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Página de perfil de paciente / necesidad</td>
+        <td>Alta</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Página de médico</td>
+        <td>Alta</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Listado de médicos / listado de servicios</td>
+        <td>Alta</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Página de centro / localización</td>
+        <td>Media-alta</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Landing de campaña</td>
+        <td>Alta</td>
+        <td>Zoopa a partir del sistema</td>
+      </tr>
+      <tr>
+        <td>Landing evergreen SEO</td>
+        <td>Media-alta</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Artículo / health library</td>
+        <td>Alta</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Hub FAQ / topic page</td>
+        <td>Media</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Página institucional</td>
+        <td>Media</td>
+        <td>Branding + Zoopa</td>
+      </tr>
+      <tr>
+        <td>Página internacional</td>
+        <td>Media-alta</td>
+        <td>Zoopa</td>
+      </tr>
+      <tr>
+        <td>Contacto / conversión / cita</td>
+        <td>Alta</td>
+        <td>Zoopa</td>
+      </tr>
+    </tbody></table>
+
+    <div class="copy-box">Reparto recomendado de trabajo:
+
+Agencia de branding:
+- foundations visuales
+- principios de marca digital
+- sistema fotográfico / ilustrativo
+- iconografía
+- 3-5 page archetypes de referencia de máximo nivel
+
+Zoopa:
+- traducción de marca a design system digital
+- definición de 12-18 páginas tipo
+- creación de 25-40 componentes
+- reglas responsive
+- variantes para CMS
+- landings
+- evolución posterior del sistema</div>
+
+    <table>
+      <tbody><tr>
+        <th>Escenario</th>
+        <th>Volumen de diseño</th>
+        <th>Valoración</th>
+      </tr>
+      <tr>
+        <td>Mínimo viable</td>
+        <td>10-12 páginas tipo + 20-25 componentes</td>
+        <td>Posible, pero justo para un site tan rico</td>
+      </tr>
+      <tr>
+        <td>Recomendado</td>
+        <td>12-18 páginas tipo + 25-40 componentes</td>
+        <td>Equilibrio correcto entre control y escalabilidad</td>
+      </tr>
+      <tr>
+        <td>Excesivo / poco operativo</td>
+        <td>25+ páginas tipo diseñadas una a una</td>
+        <td>No recomendable; deriva en pseudo-maquetación manual</td>
+      </tr>
+    </tbody></table>
+
+    <div class="insight-box">Conclusión: la agencia debería preparar aproximadamente un sistema visual completo, entre 25 y 40 componentes y entre 12 y 18 páginas tipo. Por encima de ese volumen deja de ser diseño de sistema y pasa a ser producción manual poco eficiente.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">16</div>
+      <div class="section-title">Criterios de Exito</div>
+      <div class="section-time">KPIs</div>
+    </div>
+
+    <div class="metrics-box">
+      <h4>Métricas de seguimiento</h4>
+      <div class="metric-row">
+        <span>Conversion a cita / lead por servicio e idioma</span>
+        <span class="metric-value">KPI principal</span>
+      </div>
+      <div class="metric-row">
+        <span>Velocidad de publicacion de nuevas landings</span>
+        <span class="metric-value">De semanas a dias</span>
+      </div>
+      <div class="metric-row">
+        <span>Core Web Vitals y tiempo de carga</span>
+        <span class="metric-value">Objetivo verde</span>
+      </div>
+      <div class="metric-row">
+        <span>Tracking coverage</span>
+        <span class="metric-value">100% de landings, formularios y CTAs críticos instrumentados</span>
+      </div>
+      <div class="metric-row">
+        <span>Funnel visibility</span>
+        <span class="metric-value">Sesión a revenue trazable por canal y campaña</span>
+      </div>
+      <div class="metric-row">
+        <span>Form completion rate por journey</span>
+        <span class="metric-value">Controlado por servicio, idioma y dispositivo</span>
+      </div>
+      <div class="metric-row">
+        <span>Lead-to-appointment rate</span>
+        <span class="metric-value">Objetivo de negocio prioritario</span>
+      </div>
+      <div class="metric-row">
+        <span>Time-to-contact y SLA comercial</span>
+        <span class="metric-value">Monitorizado dentro de HubSpot</span>
+      </div>
+      <div class="metric-row">
+        <span>Cobertura SEO/GEO de servicios, medicos y FAQs</span>
+        <span class="metric-value">Cobertura estructurada</span>
+      </div>
+      <div class="metric-row">
+        <span>Consistencia de marca entre web y campañas</span>
+        <span class="metric-value">Sin fragmentacion</span>
+      </div>
+    </div>
+
+    <div class="final-section">
+      <strong>Recomendacion final:</strong> la mejor propuesta para Dexeus Mujer es una nueva plataforma web diseñada como sistema digital de crecimiento, no como un rediseño cosmetico. La agencia de branding deberia aportar foundations y algunas paginas tipo; Zoopa deberia liderar UX, design system digital, templates, implementacion y evolucion. Tras revisar la propuesta adjunta, dejamos consolidado que Drupal no debe mantenerse. Las dos rutas viables son un WordPress unico, desarrollado en nativo a medida, o una arquitectura desacoplada con frontend moderno y CMS estructurado. En ambos casos, HubSpot, multidioma, SEO/GEO y landings deben resolverse desde el nucleo del proyecto y no como capas posteriores.
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brands">
+      <div>
+        <span class="footer-brand">ZOOPA</span>
+        <span class="footer-brand-url">zoopa.es</span>
+      </div>
+      <div>
+        <span class="footer-brand">498AS</span>
+        <span class="footer-brand-url">498as.com</span>
+      </div>
+    </div>
+    <div class="footer-info">
+      <div>
+        <strong>ZOOPA</strong> — Innovation &amp; Creative Technology<br>
+        <a href="https://zoopa.es/">zoopa.es</a>
+      </div>
+      <div style="text-align: right;">
+        <strong>Documento de trabajo</strong> — Propuesta base para Dexeus Mujer<br>
+        Redactado a partir de los analisis de Dexeus y Mayo Clinic Health System
+      </div>
+    </div>
+    <div class="footer-note">
+      Guia generada el 17 marzo 2026 • Propuesta de proyecto web y modelo de colaboracion<br>
+      <span class="small">Documento editable en HTML</span>
+    </div>
+  </footer>
+
+
+
+</body></html>
